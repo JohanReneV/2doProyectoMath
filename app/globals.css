@@ -1,11 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* Removed unsupported @custom-variant dark (&:is(.dark *)); */
 
 :root {
   /* Actualizando tokens de diseño para el dashboard educativo */
-  --background: oklch(1 0 0); /* Blanco puro */
   --foreground: oklch(0.35 0 0); /* Gris medio para texto principal */
   --card: oklch(0.96 0.01 240); /* Gris muy claro con tinte azul */
   --card-foreground: oklch(0.15 0.05 240); /* Azul oscuro para texto en tarjetas */
@@ -116,15 +115,11 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-    background-image: url('/bg-math.jpg'); /* Ajusta el nombre si es necesario */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  background-image: url('imgs/mathematics-6784617_1280.jpg'); /* Ajusta el nombre si es necesario */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
