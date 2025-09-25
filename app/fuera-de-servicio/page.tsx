@@ -1,5 +1,10 @@
+import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "MathSEQ",
+}
 
 export default function FueraDeServicio() {
   return (
